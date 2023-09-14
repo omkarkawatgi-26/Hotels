@@ -20,6 +20,7 @@ const campgroundsRoute = require('./routes/campgrounds')
 const reviewsRoute = require('./routes/reviews');
 const userRoute = require('./routes/user');
 const dbUrl = process.env.DB_URL || process
+const PORT = process.env.PORT || 5000;
 
 
 
@@ -120,6 +121,6 @@ app.use((err, req, res, next) => {
     res.status(statusCode).render('error', { err });
 })
 
-app.listen(3000, () => {
-    console.log("server is running on port 3000")
+app.listen(PORT, () => {
+    console.log(`server is running on port ${PORT}`)
 })
