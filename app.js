@@ -46,6 +46,15 @@ app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 
+function ignoreFavicon(req, res, next) {
+    if (req.originalUrl.includes('favicon.ico')) {
+        res.status(204).end()
+    }
+    next();
+}
+
+app.use(ignoreFavicon);
+
 
 
 
