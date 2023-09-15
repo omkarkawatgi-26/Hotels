@@ -19,7 +19,7 @@ const User = require('./models/user');
 const campgroundsRoute = require('./routes/campgrounds')
 const reviewsRoute = require('./routes/reviews');
 const userRoute = require('./routes/user');
-const dbUrl = process.env.DB_URL || process
+const dbUrl = process.env.DB_URL;
 const PORT = process.env.PORT || 5000;
 
 
