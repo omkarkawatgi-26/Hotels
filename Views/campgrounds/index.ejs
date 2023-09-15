@@ -10,7 +10,11 @@
             <div class="card mb-3">
                 <div class="row">
                     <div class="col-md-4">
-                        <img src="<%= campground.images[0].url%>" alt="" class="img-fluid">
+                        <% if(campground.images.length !==0){ %>
+                            <img src="<%= campground.images[0].url%>"
+                                onerror="this.src='https://images.unsplash.com/photo-1581925966936-be16cec1245e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80'"
+                                alt="Hotel Picture" class="img-fluid">
+                            <%}%>
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
